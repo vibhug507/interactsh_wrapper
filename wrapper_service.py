@@ -39,7 +39,7 @@ class WrapperService:
             self.find_active_testing_server()
 
         interactions = []
-        with open(log_file_path, 'r') as file:
+        with open(self.log_file_path, 'r') as file:
             for line in file:
                 words = line.split(' ')
                 if words[0] == "[" + self.active_testing_server_code + "]":
